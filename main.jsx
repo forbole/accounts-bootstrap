@@ -132,7 +132,7 @@ class Field extends Accounts.ui.Field {
     } = this.props;
     const { mount = true } = this.state;
     return mount ? (
-      <div className={["form-group", required ? "required" : ""].join(' ')}>
+      <div className={["form-group label-floating", required ? "required" : ""].join(' ')}>
         <label htmlFor={ id } className="form-control-label control-label">{ label }</label>
         {/*}<input id="password" className="form-control" name="password" style={{display: 'none'}} /> */}
         <input id={ id }
@@ -143,7 +143,6 @@ class Field extends Accounts.ui.Field {
                autoCapitalize={ type == 'email' ? 'none' : undefined }
                autoCorrect="off"
                onChange={ onChange }
-               placeholder={ hint }
                defaultValue={ defaultValue }
                required={required ? "required" : ""} />
       </div>
